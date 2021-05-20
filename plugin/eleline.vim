@@ -63,7 +63,7 @@ endfunction
 function! ElelineError() abort
   if exists('g:loaded_ale')
     let s:ale_counts = ale#statusline#Count(bufnr(''))
-    return s:ale_counts[0] == 0 ? '' : '🔥'.s:ale_counts[0].' '
+    return s:ale_counts[0] == 0 ? '' : '💥'.s:ale_counts[0].' '
   endif
   return ''
 endfunction
@@ -71,7 +71,7 @@ endfunction
 function! ElelineWarning() abort
   if exists('g:loaded_ale')
     " Ensure ElelineWarning() is called after ElelineError() so that s:ale_counts can be reused.
-    return s:ale_counts[1] == 0 ? '' : '⚡'.s:ale_counts[1].' '
+    return s:ale_counts[1] == 0 ? '' : '🔥'.s:ale_counts[1].' '
   endif
   return ''
 endfunction
